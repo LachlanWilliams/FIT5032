@@ -116,14 +116,14 @@ const allFamousWorks = computed(() =>
 );
 
 // Activity 4: Find author by name
-const orwell = computed(() => {
-  // TODO: CODE TO FIND AUTHOR BY NAME HERE
-})
+const orwell = computed(() =>
+  authors.find((author) => author.name === "George Orwell")
+);
 
 // Activity 5: Find author by ID
-const austen = computed(() => {
-  // TODO: CODE TO FIND AUTHOR BY ID HERE
-})
+const austen = computed(() =>
+  authors.find((author) => author.id === 1)
+);
 </script>
 
 <style scoped>
