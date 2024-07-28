@@ -58,13 +58,14 @@
       <p>
         Company:
         <!-- Activity 9a: Get the company name from the bookstores object. -->
-        <!-- TODO: CODE TO GET COMPANY NAME HERE -->
+        {{ bookstoresName }}
+
       </p>
 
       <p>
         Total Stores:
         <!-- Activity 9b: Get the total number of stores from the bookstores object. -->
-        <!-- TODO: CODE TO GET TOTAL STORES HERE -->
+        {{ totalBookStores }}
       </p>
 
       <h3>Iterating Object Properties</h3>
@@ -131,6 +132,11 @@ const orwell = computed(() =>
 const austen = computed(() =>
   authors.find((author) => author.id === 1)
 );
+
+const bookstoresName = computed(() => bookstores.name);
+
+const totalBookStores = computed(()=> bookstores.totalStores);
+
 </script>
 
 <style scoped>
