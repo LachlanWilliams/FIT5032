@@ -104,6 +104,7 @@ const modernAuthors = computed(() => {
 // Activity 3: Get all famous works
 const allFamousWorks = computed(() => {
   // TODO: CODE TO GET ALL FAMOUS WORKS HERE
+  authors.flatMap((author) => author.famousWorks.map((work) => work.title))
 })
 
 // Activity 4: Find author by name
