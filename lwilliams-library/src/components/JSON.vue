@@ -81,6 +81,11 @@
       <p>Opening Hours:</p>
       <!-- Activity 11: Iterate through the openingHours object and display the day of the week and the opening and closing times. -->
       <!-- TODO: CODE TO RENDER LIST OF OPENING HOURS HERE -->
+      <ul>
+        <li v-for="(hours, days) in openingHours" :key="days">
+          {{ days }}: {{ hours.open }} - {{ hours.close }}
+        </li>
+      </ul>
 
       <h3>Working with Arrays in Objects</h3>
       <!-- Activity 12: Get the top sellers from the bookstores object. -->
@@ -142,6 +147,8 @@ const bookstoresName = computed(() => bookstores.name);
 const totalBookStores = computed(()=> bookstores.totalStores);
 
 const storeTypes = computed(() => bookstores.storeTypes);
+
+const openingHours = computed(() => bookstores.openingHours);
 
 </script>
 
