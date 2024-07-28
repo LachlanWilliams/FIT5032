@@ -71,7 +71,11 @@
       <h3>Iterating Object Properties</h3>
       <p>Store Types:</p>
       <!-- Activity 10: Iterate through the storeTypes array and display the store type and the number of stores that use that type. -->
-      <!-- TODO: CODE TO RENDER LIST OF STORE TYPES HERE -->
+      <ul>
+        <li v-for="(count, type) in storeTypes" :key="type">
+          {{ type.charAt(0).toUpperCase() + type.slice(1) }} Stores: {{ count }}
+        </li>
+      </ul>
 
       <h3>Nested Objects</h3>
       <p>Opening Hours:</p>
@@ -136,6 +140,8 @@ const austen = computed(() =>
 const bookstoresName = computed(() => bookstores.name);
 
 const totalBookStores = computed(()=> bookstores.totalStores);
+
+const storeTypes = computed(() => bookstores.storeTypes);
 
 </script>
 
