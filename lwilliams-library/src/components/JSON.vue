@@ -31,7 +31,9 @@
       <p>Famous works:</p>
       <ul>
         <!-- Activity 8: Render a list of all famous works. Hint: Use the v-for directive to iterate through the array of authors that you have filtered out. -->
-        <!-- TODO: CODE TO RENDER LIST OF FAMOUS WORKS HERE -->
+        <li v-for="work in allFamousWorks" :key="work">
+          {{ work }} {{ work.year}}
+        </li>
       </ul>
 
       <h3>Finding in Arrays</h3>
@@ -114,7 +116,7 @@ const modernAuthors = computed(() =>
 const allFamousWorks = computed(() =>
   authors.flatMap((author) => author.famousWorks.map((work) => work.title))
 );
-
+console.log(allFamousWorks)
 // Activity 4: Find author by name
 const orwell = computed(() =>
   authors.find((author) => author.name === "George Orwell")
