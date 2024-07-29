@@ -37,8 +37,7 @@
       </ul>
 
       <h3>Finding in Arrays</h3>
-      <p>Finding by property: 
-        <span :class="highlightClass">{{ orwell.name }}</span>
+      <p>Finding by property: {{ orwell.name }}
       </p>
 
       <h3>Nested Arrays/Objects</h3>
@@ -106,6 +105,7 @@
     <section class="lab-section">
       <h2>Attribute, Class and Style Binding with <code>v-bind</code></h2>
       <p>Highlighting Specific Authors:</p>
+      <span :class="highlightClass">{{ orwell.name }}</span>
 
     </section>
   </div>
