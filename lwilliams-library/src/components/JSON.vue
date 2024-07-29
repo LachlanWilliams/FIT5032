@@ -91,7 +91,7 @@
       <!-- Activity 12: Get the top sellers from the bookstores object. -->
       <!-- TODO: CODE TO GET TOP SELLERS HERE -->
       <p>We operate in:</p>
-      <p>Our #1 seller:</p>
+      <p>Our #1 seller: {{ topSeller }}</p>
     </section>
 
     <section class="lab-section">
@@ -149,6 +149,8 @@ const totalBookStores = computed(()=> bookstores.totalStores);
 const storeTypes = computed(() => bookstores.storeTypes);
 
 const openingHours = computed(() => bookstores.openingHours);
+
+const topSeller = computed(() => bookstores.topSellers[0])
 
 </script>
 
