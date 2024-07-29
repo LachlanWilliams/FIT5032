@@ -42,7 +42,6 @@
       <h3>Nested Arrays/Objects</h3>
       <p>{{ austen?.name }}'s works:</p>
       <!-- Activity 9: Render a list of Austen's works. Hint: Use the v-for directive to iterate through the array of authors that you have filtered out. -->
-      <!-- TODO: CODE TO RENDER LIST OF AUSTEN'S WORKS HERE -->
        <ul>
         <li v-for="work in austen.famousWorks" :key="work">
             {{ work.title }} ({{ work.year }})
@@ -80,7 +79,6 @@
       <h3>Nested Objects</h3>
       <p>Opening Hours:</p>
       <!-- Activity 11: Iterate through the openingHours object and display the day of the week and the opening and closing times. -->
-      <!-- TODO: CODE TO RENDER LIST OF OPENING HOURS HERE -->
       <ul>
         <li v-for="(hours, days) in openingHours" :key="days">
           {{ days }}: {{ hours.open }} - {{ hours.close }}
@@ -89,7 +87,6 @@
 
       <h3>Working with Arrays in Objects</h3>
       <!-- Activity 12: Get the top sellers from the bookstores object. -->
-      <!-- TODO: CODE TO GET TOP SELLERS HERE -->
       <p>We operate in:</p>
       <p>Our #1 seller: {{ topSeller }}</p>
     </section>
