@@ -37,7 +37,9 @@
       </ul>
 
       <h3>Finding in Arrays</h3>
-      <p>Finding by property: {{ orwell?.name }}</p>
+      <p>Finding by property: 
+        <span :class="highlightClass">{{ orwell.name }}</span>
+      </p>
 
       <h3>Nested Arrays/Objects</h3>
       <p>{{ austen?.name }}'s works:</p>
@@ -148,6 +150,8 @@ const storeTypes = computed(() => bookstores.storeTypes);
 const openingHours = computed(() => bookstores.openingHours);
 
 const topSeller = computed(() => bookstores.topSellers[0])
+
+const highlightClass = computed(() => 'highlight');
 
 </script>
 
