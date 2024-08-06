@@ -66,7 +66,6 @@
 
 <script setup>
 // Our logic will go here
-console.log("Hello owrld")
 
     import { ref } from 'vue';
     
@@ -81,8 +80,6 @@ console.log("Hello owrld")
     const submittedCards = ref([]);
 
     const submitForm = () => {
-        console.log("Hello owrld")
-        console.log(formData.value)
         submittedCards.value.push({
             ...formData.value
         });
