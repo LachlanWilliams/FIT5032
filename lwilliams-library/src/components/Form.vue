@@ -7,23 +7,23 @@
                     <div class="row-mb-3">
                         <div class="col-md-6">
                             <label for="username" class="form-label">Username:</label><br>
-                            <input type="text" class="form-control" id="username" v-model="formData.username"><br>
+                            <input type="text" class="form-control" id="username" required v-model="formData.username"><br>
                         </div>
                         <div class="col-md-6">
                             <label for="password" class="form-label">Password:</label><br>
-                            <input type="password" class="form-control" id="password" v-model="formData.password"><br>
+                            <input type="password" class="form-control" id="password" minlength="4" maxlength="10" v-model="formData.password"><br>
                         </div>
                     </div>
                     <div class="row-mb-3"> 
                         <div class="col-md-6">
                             <div class="form-check">
                                 <label for="isAustralian" class="form-label">Australian Resident?</label><br>
-                                <input type="checkbox" v-model="formData.isAustralian"><br>
+                                <input type="checkbox" required v-model="formData.isAustralian"><br>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <label for="gender" class="form-label">Gender</label><br>
-                            <select id="gender" class="form-control" v-model="formData.gender">
+                            <select id="gender" class="form-control" required v-model="formData.gender">
                                 <option value="female">Female</option>
                                 <option value="male">Male</option>
                                 <option value="other">Other</option>
@@ -33,7 +33,7 @@
                     </div>
                     <div class="row-mb-3"> 
                         <label for="reason" class="form-label">Reason For Joining:</label><br>
-                        <textarea id="reason" class="form-control" name="reason" rows="3" v-model="formData.reason"></textarea><br>
+                        <textarea id="reason" class="form-control" name="reason" rows="3" minlength="5" maxlength="30" v-model="formData.reason"></textarea><br>
                         
                     </div>
                     <div class="text-center">
